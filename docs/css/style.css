@@ -1539,6 +1539,24 @@ button {
   font-size: 16px;
 }
 
+.t-center {
+  text-align: center;
+}
+
+.big-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b2e5ef), to(rgba(178, 229, 239, 0)));
+  background: linear-gradient(to bottom, #b2e5ef, rgba(178, 229, 239, 0));
+  /* голубой -> прозрачный */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 190px;
+  font-weight: 700;
+  line-height: 100%;
+  text-decoration: underline;
+  text-align: center;
+}
+
 .stages {
   padding: 50px 0px;
 }
