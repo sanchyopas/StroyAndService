@@ -1511,6 +1511,17 @@ img {
   display: block;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 120%;
+}
+
 button {
   border: none;
   cursor: pointer;
@@ -1531,6 +1542,11 @@ button {
 
 .btn--large {
   padding: 22px 88px;
+  font-size: 20px;
+}
+
+.btn--medium {
+  padding: 15px 70px;
   font-size: 20px;
 }
 
