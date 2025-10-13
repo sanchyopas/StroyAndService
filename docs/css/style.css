@@ -1591,7 +1591,7 @@ button {
 }
 
 .no-webp .garant__bg{
-  background-image: url("/img/garant-text.png"); }
+  background-image: url("img/garant-text.png"); }
 
 .garant__bg {
   width: 100%;
@@ -6744,4 +6744,4 @@ body main {
   }
 }
 
-.webp .garant__bg{ background-image: url(/img/garant-text.webp); }
+.webp .garant__bg{ background-image: url(img/garant-text.webp); }
