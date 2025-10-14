@@ -51,11 +51,12 @@
               </div>
             </div>
 
-            <div class="hero__controls">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
+            <div class="slider-controls">
               <div class="swiper-scrollbar"></div>
+              <div class="slider-controls__buttons">
+                <div class="swiper-button-prev hero__btn-prev"></div>
+                <div class="swiper-button-next hero__btn-next"></div>
+              </div>
             </div>
 
           </div>
@@ -64,7 +65,65 @@
     </div>
   </section>
 
-  <section class="stages">
+  <section class="about py">
+    <h2 class="big-title t-center">О компании</h2>
+    <div class="container">
+      <div class="about__row">
+        <div class="about__col">
+          <div class="swiper about__slider">
+            <div class="swiper-wrapper about__wrapper">
+              <div class="swiper-slide about__slide">
+                <div class="about__slide-image">
+                  <img src="@img/about.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__slide-image">
+                  <img src="@img/about.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__slide-image">
+                  <img src="@img/about.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide about__slide">
+                <div class="about__slide-image">
+                  <img src="@img/about.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <div class="swiper-scrollbar about__scrollbar"></div>
+              <div class="slider-controls__buttons">
+                <div class="swiper-button-prev about__btn-prev"></div>
+                <div class="swiper-button-next about__btn-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__col">
+          <div class="about__text text">
+            <p>
+              Компания ООО <span>«СтройЭнд Сервис»</span> была создана в 2014 году как компания по строительству и
+              ремонтным работам жилых и промышленных зданий и сооружений, изготовлению и монтажу металлоконструкций, ПВХ
+              изделий.
+            </p>
+            <p>
+              Весь комплекс строительных и ремонтных работ, начиная от строительства, отделки, изготовления и сборки ПВХ
+              мы выполняем своими силами, привлекая субподрядные организации только на специализированные работы. Имеем
+              полную техническую базу для выполнения строительно-монтажных работ.
+            </p>
+            <p>
+              Мы тщательно отбираем поставщиков сырья и материалов для наших объектов.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stages py">
     <div class="container">
       <h2 class="stages__title title">
         Этапы работ
@@ -109,15 +168,63 @@
       </div>
     </div>
   </section>
-  <section class="about">
-    <h2 class="big-title t-center">О компании</h2>
+
+  <section class="service py">
     <div class="container">
-      <div class="about__row">
-        <div class="about__col"></div>
-        <div class="about__col"></div>
+      <h2 class="big-title">Услуги</h2>
+      <div class="service__slider swiper">
+        <div class="service__wrapper swiper-wrapper">
+          <div class="service__slide swiper-slide">
+            <div class="service__image">
+              <img src="@img/service.jpg" alt="" class="service__img">
+              <p class="service__title">Раздвижные системы</p>
+              <p class="service__text">
+                Веранд, беседок, террас, зон для барбекю
+              </p>
+            </div>
+            <p class="service__price">от 5200 за м²</p>
+            <button type="button" class="service__btn btn btn--medium">Начать расчет</button>
+          </div>
+          <div class="service__slide swiper-slide">
+            <div class="service__image">
+              <img src="@img/service.jpg" alt="" class="service__img">
+              <p class="service__title">Раздвижные системы</p>
+              <p class="service__text">
+                Веранд, беседок, террас, зон для барбекю
+              </p>
+            </div>
+            <p class="service__price">от 5200 за м²</p>
+            <button type="button" class="service__btn btn btn--medium">Начать расчет</button>
+          </div>
+          <div class="service__slide swiper-slide">
+            <div class="service__image">
+              <img src="@img/service.jpg" alt="" class="service__img">
+              <p class="service__title">Раздвижные системы</p>
+              <p class="service__text">
+                Веранд, беседок, террас, зон для барбекю
+              </p>
+            </div>
+            <p class="service__price">от 5200 за м²</p>
+            <button type="button" class="service__btn btn btn--medium">Начать расчет</button>
+          </div>
+          <div class="service__slide swiper-slide">
+            <div class="service__image">
+              <img src="@img/service.jpg" alt="" class="service__img">
+              <p class="service__title">Раздвижные системы</p>
+              <p class="service__text">
+                Веранд, беседок, террас, зон для барбекю
+              </p>
+            </div>
+            <p class="service__price">от 5200 за м²</p>
+            <button type="button" class="service__btn btn btn--medium">Начать расчет</button>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
+
+
 </main>
 
 @@include('html/_footer.html')

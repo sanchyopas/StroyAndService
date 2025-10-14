@@ -1,14 +1,32 @@
 import * as functions from './modules/baseFunctions.js';
 import Swiper from "swiper";
+import {Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 functions.isWebp();
 
 
 
-const swiper = new Swiper('.swiper', {
+const heroSlider = new Swiper('.hero__slider', {
+  modules: [Navigation, Scrollbar],
   direction: 'horizontal',
   loop: true,
   slidesPerView: 2.5,
+  spaceBetween: 20,
+
+  navigation: {
+    nextEl: '.hero__btn-next',
+    prevEl: '.hero__btn-prev',
+  },
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+const aboutSlider = new Swiper('.about__slider', {
+  modules: [Scrollbar, Navigation],
+  direction: 'horizontal',
+  slidesPerView: 1,
   spaceBetween: 20,
 
   pagination: {
@@ -16,11 +34,31 @@ const swiper = new Swiper('.swiper', {
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.about__btn-next',
+    prevEl: '.about__btn-prev',
   },
 
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: '.about__scrollbar',
+  },
+});
+
+const serviceSlider = new Swiper('.service__slider', {
+  modules: [Scrollbar, Navigation],
+  direction: 'horizontal',
+  slidesPerView: 4,
+  spaceBetween: 37,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.about__btn-next',
+    prevEl: '.about__btn-prev',
+  },
+
+  scrollbar: {
+    el: '.about__scrollbar',
   },
 });
