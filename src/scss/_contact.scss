@@ -1,0 +1,73 @@
+.contact {
+
+
+  //.contact_inner
+  &_inner {
+    position: relative;
+    border-radius: 80px;
+    box-shadow: 0px 316px 88px 0px rgba(150, 150, 150, 0), 0px 202px 81px 0px rgba(150, 150, 150, 0.01), 0px 114px 68px 0px rgba(150, 150, 150, 0.05), 0px 50px 50px 0px rgba(150, 150, 150, 0.09), 0px 13px 28px 0px rgba(150, 150, 150, 0.1);
+    overflow: hidden;
+  }
+
+  .map-frame {
+  }
+
+  //.contact__info
+  &__info {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 365px;
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 0px 225px 63px 0px rgba(87, 87, 87, 0), 0px 144px 58px 0px rgba(87, 87, 87, 0.01), 0px 81px 49px 0px rgba(87, 87, 87, 0.05), 0px 36px 36px 0px rgba(87, 87, 87, 0.09), 0px 9px 20px 0px rgba(87, 87, 87, 0.1);
+    background: rgba(255, 255, 255, 1);
+
+  }
+
+  //.contact__title
+  &__title {
+    margin-bottom: 20px;
+    color: rgba(72, 123, 148, 1);
+    font-size: 24px;
+    font-weight: 500;
+
+  }
+
+  //.contact__inner-info
+  &__inner-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 221px;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        font-weight: 300;
+      }
+    }
+
+  }
+
+  //.contact__phone
+  &__phone{
+    color: rgba(72, 123, 148, 1);
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  //.contact__social
+  &__social {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    flex-direction: column;
+  }
+
+
+}
