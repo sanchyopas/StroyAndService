@@ -78,7 +78,7 @@
 
   //.hero__slider
   &__slider {
-    height: 480px;
+
   }
 
   //.hero__wrapper
@@ -87,6 +87,7 @@
 
   //.hero__slide
   &__slide {
+    height: 480px !important;
     width: 294px !important;
     overflow: hidden;
     border-radius: 40px;
@@ -103,7 +104,7 @@
     }
   }
   .slider-controls {
-    max-width: 707px;
+    //max-width: 707px;
   }
 
 

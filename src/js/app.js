@@ -4,12 +4,11 @@ import {Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 functions.isWebp();
 
-
+import "./modules/tabs.js"
 
 const heroSlider = new Swiper('.hero__slider', {
   modules: [Navigation, Scrollbar],
   direction: 'horizontal',
-  loop: true,
   slidesPerView: 2.5,
   spaceBetween: 20,
 
