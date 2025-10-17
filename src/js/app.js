@@ -61,3 +61,23 @@ const serviceSlider = new Swiper('.service__slider', {
     el: '.about__scrollbar',
   },
 });
+
+const videoSlider = new Swiper('.video__slider', {
+  modules: [Scrollbar, Navigation],
+  direction: 'horizontal',
+  slidesPerView: 4,
+  spaceBetween: 37,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.about__btn-next',
+    prevEl: '.about__btn-prev',
+  },
+
+  scrollbar: {
+    el: '.about__scrollbar',
+  },
+});
