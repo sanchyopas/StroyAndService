@@ -26,13 +26,13 @@
     gap: 40px;
 
     li {
-
-
       a {
         color: #ffffff;
       }
+    }
 
-
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
     }
   }
 
@@ -53,16 +53,21 @@
   }
 
   //.footer__bottom
-  &__bottom{
+  &__bottom {
     padding: 17px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
   }
 
   //.footer__link
-  &__link{
+  &__link {
     font-size: 13px;
     text-decoration: underline;
     color: rgba(255, 255, 255, 0.67);

@@ -1,10 +1,20 @@
 .about {
+ display: none;
 
   //.about__row
   &__row {
     display: flex;
     align-items: center;
-    gap: 90px;
+    gap: 40px;
+    min-width: 0;
+
+    @media screen and (min-width: 1200px) {
+      gap: 90px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+    }
   }
 
   //.about__col
@@ -12,7 +22,9 @@
 
     &:first-child {
       min-width: 0;
-      flex: 0 0 50%;
+      @media screen and (min-width: 992px) {
+        flex: 0 0 50%;
+      }
     }
   }
 
@@ -26,6 +38,10 @@
 
   //.about__slide
   &__slide {
+
+    @media screen and (max-width: 1200px) {
+      width: 220px !important;
+    }
   }
 
   //.about__slide-image
