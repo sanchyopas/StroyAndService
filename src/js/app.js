@@ -9,7 +9,6 @@ import "./modules/tabs.js"
 const heroSlider = new Swiper('.hero__slider', {
     modules: [Navigation, Scrollbar],
     direction: 'horizontal',
-    slidesPerView: 2.5,
     spaceBetween: 20,
 
     navigation: {
@@ -20,6 +19,15 @@ const heroSlider = new Swiper('.hero__slider', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+
+    breakpoints: {
+        310: {
+            slidesPerView: 1,
+        },
+        578: {
+            slidesPerView: 2.5,
+        }
+    }
 });
 
 const aboutSlider = new Swiper('.about__slider', {
@@ -76,7 +84,6 @@ const serviceSlider = new Swiper('.service__slider', {
 const videoSlider = new Swiper('.video__slider', {
     modules: [Scrollbar, Navigation],
     direction: 'horizontal',
-    slidesPerView: 4,
     spaceBetween: 37,
 
     pagination: {
@@ -91,4 +98,13 @@ const videoSlider = new Swiper('.video__slider', {
     scrollbar: {
         el: '.about__scrollbar',
     },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        768:{
+            slidesPerView: 1.5,
+        }
+    }
 });

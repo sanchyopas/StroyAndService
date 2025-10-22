@@ -40,6 +40,11 @@
     @media screen and (max-width: 1200px) {
       border-radius: 40px;
     }
+
+    @media screen and (max-width: 425px) {
+      padding: 25px;
+    }
+
   }
 
   //.hero__untitle
@@ -47,6 +52,10 @@
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
+
+    @media screen and (max-width: 425px) {
+      font-size: 18px;
+    }
   }
 
   //.hero__title
@@ -63,6 +72,10 @@
     @media screen and (max-width: 768px) {
       font-size: 45px;
     }
+
+    @media screen and (max-width: 425px) {
+      font-size: 35px;
+    }
   }
 
   //.hero__subtitle
@@ -78,6 +91,10 @@
 
     @media screen and (max-width: 768px) {
       font-size: 18px;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 16px;
     }
   }
 

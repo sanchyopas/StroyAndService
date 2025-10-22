@@ -64,6 +64,7 @@ button {
 
     @media screen and (max-width: 768px) {
       width: 100%;
+      padding: 22px 20px;
     }
   }
 
@@ -99,6 +100,15 @@ button {
   @media screen and (max-width: 1200px) {
     font-size: 140px;
   }
+
+  @media screen and (max-width: 578px) {
+    font-size: 100px;
+  }
+
+  @media screen and (max-width: 394px) {
+    font-size: 80px;
+  }
+
 }
 
 .title {
@@ -117,6 +127,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 578px) {
+    width: 75px;
+    height: 75px;
+  }
 
 
   //.animate-circle__bg
@@ -151,6 +166,11 @@ button {
     justify-content: center;
     background: rgba(130, 199, 212, 1);
     border-radius: 50%;
+
+    @media screen and (max-width: 578px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
 
@@ -158,6 +178,10 @@ button {
 
 .py {
   padding: 70px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 40px 0;
+  }
 }
 
 @keyframes spin {
