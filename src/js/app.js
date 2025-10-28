@@ -5,6 +5,7 @@ import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 functions.isWebp();
 
 import "./modules/tabs.js"
+import "./modules/quiz.js"
 
 const heroSlider = new Swiper('.hero__slider', {
     modules: [Navigation, Scrollbar],
@@ -48,6 +49,13 @@ const aboutSlider = new Swiper('.about__slider', {
     scrollbar: {
         el: '.about__scrollbar',
     },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+
+    }
 });
 
 const serviceSlider = new Swiper('.service__slider', {
