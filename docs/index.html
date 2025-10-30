@@ -13,17 +13,17 @@
   <title>Сборка GULP</title>
   <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?_v=20251028134427"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?_v=20251030181112"
   />
   <link
     rel="stylesheet"
-    href="css/style.min.css?_v=20251028134427"
+    href="css/style.min.css?_v=20251030181112"
   />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css?_v=20251028134427" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css?_v=20251030181112" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20251028134427" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20251030181112" rel="stylesheet">
 
   <!-- https://realfavicongenerator.net -->
   <link
@@ -109,26 +109,28 @@
         <p>Если вы не знаете размеры, вы всегда можете воспользоваться услугой “Бесплатный замер”</p>
       </div>
       <div class="quiz__inner">
-        <p class="quiz__title">Раздвижные или распашные системы ?</p>
-        <div class="quiz__answers">
-          <div class="quiz__answer">
-            <picture><source srcset="img/quiz-1.webp" type="image/webp"><img src="img/quiz-1.png" alt=""></picture>
-            <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
-          </div>
-          <div class="quiz__answer">
-            <picture><source srcset="img/quiz-2.webp" type="image/webp"><img src="img/quiz-2.png" alt=""></picture>
-            <p>Остекление зимнего сада, пристройки</p>
+        <div class="quiz__body" id="quiz-body">
+          <p class="quiz__title">Раздвижные или распашные системы ?</p>
+          <div class="quiz__answers">
+            <div class="quiz__answer">
+              <picture><source srcset="img/quiz-1.webp" type="image/webp"><img src="img/quiz-1.png" alt=""></picture>
+              <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
+            </div>
+            <div class="quiz__answer">
+              <picture><source srcset="img/quiz-2.webp" type="image/webp"><img src="img/quiz-2.png" alt=""></picture>
+              <p>Остекление зимнего сада, пристройки</p>
+            </div>
           </div>
         </div>
         <div class="quiz__bottom">
           <div class="quiz__step">
-            <div class="quiz__current-step">1</div>
+            <div class="quiz__current-step" id="current-step">1</div>
             <div class="quiz__separat">/</div>
             <div class="quiz__last-step">4</div>
           </div>
           <div class="quiz__btn">
-            <button type="button" class="quiz__btn-outline">Назад</button>
-            <button type="button" class="quiz__btn-bg">Далее</button>
+            <button type="button" class="quiz__btn-outline" >Назад</button>
+            <button type="button" class="quiz__btn-bg" id="next-step" data-step="1">Далее</button>
           </div>
         </div>
       </div>
@@ -701,6 +703,6 @@
   </div>
 </div>
 
-<script src="js/app.min.js?_v=20251028134427"></script>
+<script src="js/app.min.js?_v=20251030181112"></script>
 </body>
 </html>

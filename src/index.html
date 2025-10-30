@@ -14,26 +14,28 @@
         <p>Если вы не знаете размеры, вы всегда можете воспользоваться услугой “Бесплатный замер”</p>
       </div>
       <div class="quiz__inner">
-        <p class="quiz__title">Раздвижные или распашные системы ?</p>
-        <div class="quiz__answers">
-          <div class="quiz__answer">
-            <img src="@img/quiz-1.png" alt="">
-            <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
-          </div>
-          <div class="quiz__answer">
-            <img src="@img/quiz-2.png" alt="">
-            <p>Остекление зимнего сада, пристройки</p>
+        <div class="quiz__body" id="quiz-body">
+          <p class="quiz__title">Раздвижные или распашные системы ?</p>
+          <div class="quiz__answers">
+            <div class="quiz__answer">
+              <img src="@img/quiz-1.png" alt="">
+              <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
+            </div>
+            <div class="quiz__answer">
+              <img src="@img/quiz-2.png" alt="">
+              <p>Остекление зимнего сада, пристройки</p>
+            </div>
           </div>
         </div>
         <div class="quiz__bottom">
           <div class="quiz__step">
-            <div class="quiz__current-step">1</div>
+            <div class="quiz__current-step" id="current-step">1</div>
             <div class="quiz__separat">/</div>
             <div class="quiz__last-step">4</div>
           </div>
           <div class="quiz__btn">
-            <button type="button" class="quiz__btn-outline">Назад</button>
-            <button type="button" class="quiz__btn-bg">Далее</button>
+            <button type="button" class="quiz__btn-outline" >Назад</button>
+            <button type="button" class="quiz__btn-bg" id="next-step" data-step="1">Далее</button>
           </div>
         </div>
       </div>

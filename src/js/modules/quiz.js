@@ -1,9 +1,117 @@
-const quizAnswerBtn = document.querySelectorAll('.quiz__answer');
-quizAnswerBtn?.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        quizAnswerBtn.forEach(btn => {
-            btn.classList.remove('active');
-        });
-        e.currentTarget.classList.add('active');
-    })
+const questions = [
+    {
+        id: 1,
+        title: "Раздвижные или распашные системы123123 ?",
+        answers: [
+            {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю"
+            }, {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю"
+            }, {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю"
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: "Раздвижные или распашные системы2 ?",
+        answers: [
+            {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
+            }, {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
+            }, {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
+            }
+        ]
+    },
+    {
+        id: 3,
+        title: "Раздвижные или распашные системы3 ?",
+        answers: [
+            {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
+            }, {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
+            }, {
+                image: "img/quiz-1.png",
+                title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
+            }
+        ]
+    }
+]
+
+const currentStepElem = document.querySelector('.quiz__current-step');
+const lastStepElem = document.querySelector('.quiz__last-step');
+let currentStep = 1
+
+document.addEventListener('DOMContentLoaded', () => {
+    currentStepElem.innerText = 1;
+    lastStepElem.innerText = questions.length;
+
+    generateLoyoutSlide(questions[0]);
+
+    answerClickHandler();
+
+    const nextStep = document.getElementById('next-step');
+    nextStep?.addEventListener('click', nextStepHandler)
+
 })
+
+function generateLayoutAnswer(arr) {
+    return arr.answers.map((answer) =>  `
+        <div class="quiz__answer">
+          <img src="${answer.image}" alt="">
+          <p>${answer.title}</p>
+        </div>
+    `).join('');
+}
+
+function nextStepHandler(e) {
+    const currentStepDataStep = +e.currentTarget.dataset.step;
+    const parentElement = e.currentTarget.closest('.quiz__inner').querySelector('.active');
+
+    if (parentElement) {
+        if (currentStep >= questions.length) {
+            alert("Хватит кликать STOP")
+        } else {
+            currentStep += 1;
+            document.getElementById('current-step').innerText = currentStep;
+            nextQuestion(currentStep - 1);
+        }
+
+    }
+}
+
+function generateLoyoutSlide(arr) {
+    const layoutQuestion = `
+        <p class="quiz__title">${arr.title}</p>
+        <div class="quiz__answers">${generateLayoutAnswer(arr)}</div>`
+    document.getElementById('quiz-body').innerHTML = layoutQuestion;
+}
+
+function nextQuestion(currentStep) {
+    const nextElement = questions[currentStep];
+    generateLoyoutSlide(nextElement);
+    answerClickHandler();
+}
+
+function answerClickHandler() {
+    const quizAnswerBtn = document.querySelectorAll('.quiz__answer');
+    quizAnswerBtn?.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            quizAnswerBtn.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            e.currentTarget.classList.add('active');
+        })
+    })
+}
