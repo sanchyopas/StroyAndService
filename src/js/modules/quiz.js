@@ -81,7 +81,12 @@ function nextStepHandler(e) {
 
     if (parentElement) {
         if (currentStep >= questions.length) {
-            alert("Хватит кликать STOP")
+            document.getElementById('quiz-inner').innerHTML = `<p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>
+<form action="" class="form">
+          <input type="text" class="form__input" placeholder="Имя">
+          <input type="text" class="form__input" placeholder="Телефон">
+          <button type="submit" class="form__submit">Отправить</button>
+        </form>`
         } else {
             currentStep += 1;
             document.getElementById('current-step').innerText = currentStep;
