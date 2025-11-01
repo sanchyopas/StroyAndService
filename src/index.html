@@ -8,41 +8,6 @@
 
 <main>
 
-  <div class="quiz">
-    <div class="quiz__content">
-      <div class="quiz__top">
-        <p>Если вы не знаете размеры, вы всегда можете воспользоваться услугой “Бесплатный замер”</p>
-      </div>
-      <div class="quiz__inner" id="quiz-inner">
-
-        <div class="quiz__body" id="quiz-body">
-          <p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>
-          <div class="quiz__answers">
-            <div class="quiz__answer">
-              <img src="@img/quiz-1.png" alt="">
-              <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
-            </div>
-            <div class="quiz__answer">
-              <img src="@img/quiz-2.png" alt="">
-              <p>Остекление зимнего сада, пристройки</p>
-            </div>
-          </div>
-        </div>
-        <div class="quiz__bottom">
-          <div class="quiz__step">
-            <div class="quiz__current-step" id="current-step">1</div>
-            <div class="quiz__separat">/</div>
-            <div class="quiz__last-step">4</div>
-          </div>
-          <div class="quiz__btn">
-            <button type="button" class="quiz__btn-outline" >Назад</button>
-            <button type="button" class="quiz__btn-bg" id="next-step" data-step="1">Далее</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <section class="hero">
     <div class="container">
       <div class="hero__inner">
@@ -457,96 +422,104 @@
     </div>
   </div>
 
-  <div class="faq">
-    <div class="container">
-
+  <div class="faq py">
+    <div class="faq__row">
+      <div class="faq__left">
+        <h2 class="big-title faq__title">Вопрос <br> Ответ</h2>
+        <div class="faq__inner">
+          <p class="title faq__title-small">Не нашли ответ <br> на Ваш вопрос ?</p>
+          <p class="faq__text">
+            Оставьте заявку или позвоните по номеру, мы с радость ответим на ваш вопрос
+          </p>
+          <form action="." class="faq__form form" method="POST">
+            <input type="text" class="form__input" placeholder="Имя" id="name">
+            <input type="tel" class="form__input" placeholder="Номер телефона" id="phone">
+            <textarea name="message" class="form__textarea" rows="7" placeholder="Ваш вопрос"></textarea>
+            <div class="form__bottom">
+              <div class="form__bottom-left">
+                <button type="submit" class="form__submit">Оставить заявку</button>
+                <div>
+                  <div class="faq__social social">
+                    <a href=""><img src="@img/tg.png" alt=""></a>
+                    <a href=""><img src="@img/wh.png" alt=""></a>
+                  </div>
+                  <a href="tel:+79528593566" class="form__phone">+7 (952) 859-35-66</a>
+                </div>
+              </div>
+              <div class="form__bottom-right">
+                <input type="checkbox" class="form__checkbox" id="checkbox" name="agreement">
+                <label for="checkbox">
+                  Я даю свое согласие на обработку персональных данных и подверждаю, что ознакомлен(а) с
+                  <a href="">политикой конфиденциальности и обработки персональных данных</a>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="faq__right">
+        <p class="title faq__right-title">Ответы на вопросы наших клиентов</p>
+        <div class="faq__accordion accordion">
+          <div class="accordion__item">
+            <div class="accordion__title active">
+              <p>Можно ли построить дом по своему проекту ?</p>
+              <button type="button" class="accordion__btn">
+                <img src="@img/arrow-down.png" alt="">
+              </button>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores aspernatur consequuntur
+              cumque
+              delectus distinctio est eum id iure mollitia obcaecati, officiis quas quibusdam quod rem, reprehenderit
+              sequi suscipit, voluptatibus!
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title">
+              <p>Можно ли построить дом по своему проекту ?</p>
+              <button type="button" class="accordion__btn">
+                <img src="@img/arrow-down.png" alt="">
+              </button>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores aspernatur consequuntur
+              cumque
+              delectus distinctio est eum id iure mollitia obcaecati, officiis quas quibusdam quod rem, reprehenderit
+              sequi suscipit, voluptatibus!
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title">
+              <p>Можно ли построить дом по своему проекту ?</p>
+              <button type="button" class="accordion__btn">
+                <img src="@img/arrow-down.png" alt="">
+              </button>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores aspernatur consequuntur
+              cumque
+              delectus distinctio est eum id iure mollitia obcaecati, officiis quas quibusdam quod rem, reprehenderit
+              sequi suscipit, voluptatibus!
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title">
+              <p>Можно ли построить дом по своему проекту ?</p>
+              <button type="button" class="accordion__btn">
+                <img src="@img/arrow-down.png" alt="">
+              </button>
+            </div>
+            <div class="accordion__body">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores aspernatur consequuntur
+              cumque
+              delectus distinctio est eum id iure mollitia obcaecati, officiis quas quibusdam quod rem, reprehenderit
+              sequi suscipit, voluptatibus!
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <section class="faq">
-    <div class="faq-left">
-      <div class="bg-text">ВОПРОС<br>ОТВЕТ</div>
-
-      <h3>Не нашли ответ<br>на ваш вопрос?</h3>
-      <p>Оставьте заявку или позвоните по номеру — мы с радостью ответим на ваш вопрос.</p>
-
-      <form class="faq-form">
-        <input type="text" placeholder="Имя">
-        <input type="tel" placeholder="Номер телефона">
-        <textarea placeholder="Ваш вопрос"></textarea>
-        <button type="submit">Оставить заявку</button>
-        <p class="policy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
-      </form>
-    </div>
-
-    <div class="faq-right">
-      <h3>Ответы на вопросы наших клиентов</h3>
-
-      <div class="accordion">
-        <details>
-          <summary>Сколько стоит замер?</summary>
-          <p>Замер осуществляется бесплатно при заказе услуги.</p>
-        </details>
-
-        <details>
-          <summary>Как правильно просчитать размеры?</summary>
-          <p>Наши специалисты помогут вам рассчитать размеры точно.</p>
-        </details>
-
-        <details>
-          <summary>Какой производитель материала?</summary>
-          <p>Мы используем сертифицированные материалы высокого качества.</p>
-        </details>
-
-        <details>
-          <summary>Хорошо ли сохраняет тепло наше остекление?</summary>
-          <p>Да, наши конструкции обеспечивают отличную теплоизоляцию.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq-block">
-    <div class="faq-left">
-      <div class="bg-text">ВОПРОС<br>ОТВЕТ</div>
-      <h3>НЕ НАШЛИ ОТВЕТ<br>НА ВАШ ВОПРОС?</h3>
-      <p>Оставьте заявку или позвоните по номеру — мы с радостью ответим на ваш вопрос.</p>
-
-      <form class="faq-form">
-        <input type="text" placeholder="Имя" required>
-        <input type="tel" placeholder="Номер телефона" required>
-        <textarea placeholder="Ваш вопрос" rows="3"></textarea>
-        <button type="submit">Оставить заявку</button>
-        <p class="policy">
-          Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
-        </p>
-      </form>
-    </div>
-
-    <div class="faq-right">
-      <h3>ОТВЕТЫ НА ВОПРОСЫ НАШИХ КЛИЕНТОВ</h3>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <span>Сколько стоит замер?</span>
-          <button class="faq-btn">›</button>
-        </div>
-        <div class="faq-item">
-          <span>Как правильно просчитать размеры?</span>
-          <button class="faq-btn">›</button>
-        </div>
-        <div class="faq-item">
-          <span>Какой производитель материала?</span>
-          <button class="faq-btn">›</button>
-        </div>
-        <div class="faq-item">
-          <span>Хорошо ли сохраняет тепло наше остекление?</span>
-          <button class="faq-btn">›</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <div class="contact py">
     <div class="container">
@@ -582,6 +555,7 @@
 </main>
 
 @@include('html/_footer.html')
+<!--@@include('html/_popup.html')-->
 
 <script src="js/app.min.js"></script>
 </body>

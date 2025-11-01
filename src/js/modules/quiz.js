@@ -52,6 +52,7 @@ const questions = [
 const currentStepElem = document.querySelector('.quiz__current-step');
 const lastStepElem = document.querySelector('.quiz__last-step');
 let currentStep = 1
+const nextStep = document.getElementById('next-step');
 
 document.addEventListener('DOMContentLoaded', () => {
     currentStepElem.innerText = 1;
@@ -61,19 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     answerClickHandler();
 
-    const nextStep = document.getElementById('next-step');
+
     nextStep?.addEventListener('click', nextStepHandler)
 
 })
 
+
 function generateLayoutAnswer(arr) {
-    return arr.answers.map((answer) =>  `
+    return arr.answers.map((answer) => `
         <div class="quiz__answer">
           <img src="${answer.image}" alt="">
           <p>${answer.title}</p>
         </div>
     `).join('');
 }
+
+function prevStepHandler() {}
 
 function nextStepHandler(e) {
     const currentStepDataStep = +e.currentTarget.dataset.step;
@@ -89,6 +93,7 @@ function nextStepHandler(e) {
         </form>`
         } else {
             currentStep += 1;
+            nextStep.dataset.step = String(currentStep);
             document.getElementById('current-step').innerText = currentStep;
             nextQuestion(currentStep - 1);
         }
@@ -107,6 +112,11 @@ function nextQuestion(currentStep) {
     const nextElement = questions[currentStep];
     generateLoyoutSlide(nextElement);
     answerClickHandler();
+}
+
+function prevQuestion(currentStep) {
+    const prevElement = questions[currentStep];
+    console.log(prevElement)
 }
 
 function answerClickHandler() {

@@ -1,0 +1,51 @@
+.faq {
+
+  &__row {
+    display: flex;
+  }
+
+  &__left {
+    font-size: 20px;
+  }
+
+  &__right {
+    margin-top: 40px;
+  }
+
+  &__right-title {
+    max-width: 353px;
+    margin-bottom: 24px;
+    margin-left: 60px;
+  }
+
+  &__inner {
+    padding-left: calc((100vw - 1289px) / 2);
+  }
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  &__title-small {
+    max-width: 374px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+  }
+
+  &__social {
+  }
+
+
+
+  &__accordion {
+    transform: translateX(-100px);
+  }
+
+}

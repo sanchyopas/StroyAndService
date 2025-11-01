@@ -6,6 +6,7 @@ functions.isWebp();
 
 import "./modules/tabs.js"
 import "./modules/quiz.js"
+import "./modules/accordion.js"
 
 const heroSlider = new Swiper('.hero__slider', {
     modules: [Navigation, Scrollbar],
@@ -111,7 +112,7 @@ const videoSlider = new Swiper('.video__slider', {
         320: {
             slidesPerView: 1,
         },
-        768:{
+        768: {
             slidesPerView: 1.5,
         }
     }
