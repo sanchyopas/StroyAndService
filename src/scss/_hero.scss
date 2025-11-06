@@ -118,10 +118,13 @@
 
   //.hero__slide
   &__slide {
-    height: 480px !important;
     width: 294px !important;
     overflow: hidden;
     border-radius: 40px;
+
+    @media screen and (min-width: 992px) {
+      height: 480px !important;
+    }
   }
 
   //.hero__image

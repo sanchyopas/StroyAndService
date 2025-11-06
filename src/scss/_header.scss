@@ -47,6 +47,11 @@
       height: 100vh;
       background: #fff;
       overflow-y: auto;
+      z-index: 9999;
+    }
+
+    &.active{
+      display: flex;
     }
   }
 

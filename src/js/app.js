@@ -4,9 +4,10 @@ import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 
 functions.isWebp();
 
-import "./modules/tabs.js"
-import "./modules/quiz.js"
-import "./modules/accordion.js"
+import "./modules/tabs.js";
+import "./modules/quiz.js";
+import "./modules/accordion.js";
+import "./modules/smoothScroll.js";
 
 const heroSlider = new Swiper('.hero__slider', {
     modules: [Navigation, Scrollbar],
@@ -26,7 +27,7 @@ const heroSlider = new Swiper('.hero__slider', {
         310: {
             slidesPerView: 1,
         },
-        578: {
+        992: {
             slidesPerView: 2.5,
         }
     }
@@ -37,10 +38,6 @@ const aboutSlider = new Swiper('.about__slider', {
     direction: 'horizontal',
     slidesPerView: 1,
     spaceBetween: 20,
-
-    pagination: {
-        el: '.swiper-pagination',
-    },
 
     navigation: {
         nextEl: '.about__btn-next',
@@ -53,6 +50,9 @@ const aboutSlider = new Swiper('.about__slider', {
 
     breakpoints: {
         320: {
+            slidesPerView: 1,
+        },
+        768: {
             slidesPerView: 1,
         },
 
@@ -95,17 +95,13 @@ const videoSlider = new Swiper('.video__slider', {
     direction: 'horizontal',
     spaceBetween: 37,
 
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
     navigation: {
         nextEl: '.about__btn-next',
         prevEl: '.about__btn-prev',
     },
 
     scrollbar: {
-        el: '.about__scrollbar',
+        el: '.video__scrollbar',
     },
 
     breakpoints: {
@@ -117,3 +113,29 @@ const videoSlider = new Swiper('.video__slider', {
         }
     }
 });
+
+const scrollTopBtn = document.getElementById('scroll-top');
+
+document.body.addEventListener('scroll', () => {
+    const scrollTop = document.body.scrollTop;
+
+    if (scrollTop >= 600) {
+        scrollTopBtn.style.display = 'flex';
+    } else {
+        scrollTopBtn.style.display = 'none';
+    }
+});
+
+
+scrollTopBtn?.addEventListener('click', (e) => {
+    document.documentElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    })
+})
+
+const burgerMenuBtn = document.getElementById('burger');
+burgerMenuBtn?.addEventListener('click', () => {
+
+    document.querySelector('.header__mobile-cnt').classList.add('active');
+})
