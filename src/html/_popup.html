@@ -1,42 +1,95 @@
-<div class="quiz">
-  <div class="quiz__content">
-    <div class="quiz__top">
-      <p>Если вы не знаете размеры, вы всегда можете воспользоваться услугой “Бесплатный замер”</p>
-    </div>
-    <div class="quiz__inner" id="quiz-inner">
+<!--<div class="quiz">-->
+<!--  <div class="quiz__content">-->
+<!--    <div class="quiz__top">-->
+<!--      <p>Если вы не знаете размеры, вы всегда можете воспользоваться услугой “Бесплатный замер”</p>-->
+<!--    </div>-->
+<!--    <div class="quiz__inner" id="quiz-inner">-->
 
-      <div class="quiz__body" id="quiz-body">
-        <p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>
-        <div class="quiz__answers">
-          <div class="quiz__answer">
-            <img src="@img/quiz-1.png" alt="">
-            <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
-          </div>
-          <div class="quiz__answer">
-            <img src="@img/quiz-2.png" alt="">
-            <p>Остекление зимнего сада, пристройки</p>
-          </div>
-        </div>
+<!--      <div class="quiz__body" id="quiz-body">-->
+<!--        <p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>-->
+<!--        <div class="quiz__answers">-->
+<!--          <div class="quiz__answer">-->
+<!--            <img src="@img/quiz-1.png" alt="">-->
+<!--            <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>-->
+<!--          </div>-->
+<!--          <div class="quiz__answer">-->
+<!--            <img src="@img/quiz-2.png" alt="">-->
+<!--            <p>Остекление зимнего сада, пристройки</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="quiz__bottom">-->
+<!--        <div class="quiz__step">-->
+<!--          <div class="quiz__current-step" id="current-step">1</div>-->
+<!--          <div class="quiz__separat">/</div>-->
+<!--          <div class="quiz__last-step">4</div>-->
+<!--        </div>-->
+<!--        <div class="quiz__btn">-->
+<!--&lt;!&ndash;          <button type="button" class="quiz__btn-outline" id="prev-step" data-step="1">Назад</button>&ndash;&gt;-->
+<!--          <button type="button" class="quiz__btn-bg" id="next-step" data-step="1">Далее</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div id="callback" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close close"></button>
+      <div class="popup__top">
+        <p>Оставьте заявку на консультацию</p>
       </div>
-      <div class="quiz__bottom">
-        <div class="quiz__step">
-          <div class="quiz__current-step" id="current-step">1</div>
-          <div class="quiz__separat">/</div>
-          <div class="quiz__last-step">4</div>
-        </div>
-        <div class="quiz__btn">
-<!--          <button type="button" class="quiz__btn-outline" id="prev-step" data-step="1">Назад</button>-->
-          <button type="button" class="quiz__btn-bg" id="next-step" data-step="1">Далее</button>
-        </div>
+      <div class="popup__inner">
+        <form action="" class="popup__form form" method="POST" id="callback-form">
+          <input type="text" name="name" class="form__input" placeholder="Ваше имя" required/>
+          <input type="tel" name="phone" class="form__input" placeholder="номер телефона" required data-tel-input/>
+          <div class="form__row">
+            <input type="checkbox" name="agreement" class="form" id="agreement">
+            <label for="agreement" class="form__row-label">Я согласен(а) с <a href="" target="_blank">политиккой
+              конфиденциальности</a></label>
+          </div>
+          <button type="submit" class="form__submit">Отправить</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
 
-<div class="popup">
+<div id="quiz" class="popup quiz">
   <div class="popup__wrapper">
     <div class="popup__content">
+      <button data-close type="button" class="popup__close close"></button>
+      <div class="popup__top">
+        <p>Если вы не знаете размеры, вы всегда можете воспользоваться услугой “Бесплатный замер”</p>
+      </div>
+      <div class="quiz__inner" id="quiz-inner">
 
+        <div class="quiz__body" id="quiz-body">
+          <p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>
+          <div class="quiz__answers">
+            <div class="quiz__answer">
+              <img src="@img/quiz-1.png" alt="">
+              <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
+            </div>
+            <div class="quiz__answer">
+              <img src="@img/quiz-2.png" alt="">
+              <p>Остекление зимнего сада, пристройки</p>
+            </div>
+          </div>
+        </div>
+        <div class="quiz__bottom">
+          <div class="quiz__step">
+            <div class="quiz__current-step" id="current-step">1</div>
+            <div class="quiz__separat">/</div>
+            <div class="quiz__last-step">4</div>
+          </div>
+          <div class="quiz__btn">
+            <!--          <button type="button" class="quiz__btn-outline" id="prev-step" data-step="1">Назад</button>-->
+            <button type="button" class="quiz__btn-bg" id="next-step" data-step="1">Далее</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

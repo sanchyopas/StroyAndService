@@ -11,6 +11,15 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 99;
 
+  .popup__content {
+    max-width: 1040px;
+
+    @media screen and (max-width: 1150px) {
+      max-width: 800px;
+    }
+  }
+
+
   &__content {
     max-width: 1040px;
     width: 100%;
@@ -18,15 +27,6 @@
     background: #FFFFFF;
   }
 
-  &__top {
-    padding: 38px 30px;
-    border-radius: 40px;
-    background: rgba(72, 123, 148, 1);
-    font-size: 18px;
-    font-weight: 500;
-    color: #FFFFFF;
-    text-align: center;
-  }
 
   &__inner {
     padding: 30px 35px;

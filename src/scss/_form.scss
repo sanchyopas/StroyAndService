@@ -82,4 +82,14 @@
     text-decoration: underline;
   }
 
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    label {
+      font-size: 14px;
+    }
+  }
+
 }

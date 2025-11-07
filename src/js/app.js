@@ -8,6 +8,7 @@ import "./modules/tabs.js";
 import "./modules/quiz.js";
 import "./modules/accordion.js";
 import "./modules/smoothScroll.js";
+import "./modules/popup.js";
 
 const heroSlider = new Swiper('.hero__slider', {
     modules: [Navigation, Scrollbar],
