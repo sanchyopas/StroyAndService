@@ -9,6 +9,7 @@ import "./modules/quiz.js";
 import "./modules/accordion.js";
 import "./modules/smoothScroll.js";
 import "./modules/popup.js";
+import "./modules/video.js";
 
 const heroSlider = new Swiper('.hero__slider', {
     modules: [Navigation, Scrollbar],
@@ -129,6 +130,7 @@ document.body.addEventListener('scroll', () => {
 
 
 scrollTopBtn?.addEventListener('click', (e) => {
+
     document.documentElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
