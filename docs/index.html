@@ -13,17 +13,17 @@
   <title>Сборка GULP</title>
   <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?_v=20251110103912"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css?_v=20251111153053"
   />
   <link
     rel="stylesheet"
-    href="css/style.min.css?_v=20251110103912"
+    href="css/style.min.css?_v=20251111153053"
   />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css?_v=20251110103912" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css?_v=20251111153053" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20251110103912" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20251111153053" rel="stylesheet">
 
   <!-- https://realfavicongenerator.net -->
   <link
@@ -57,13 +57,15 @@
 </head>
 
 <body>
-<div class="header">
+<div class="top" id="top"></div>
+<div class="header" id="header">
   <div class="container">
     <div class="header__inner">
-      <a href="/" class="header__logo">
+      <a href="/" class="header__logo" data-anchor="top">
         <picture><source srcset="img/Logo.webp" type="image/webp"><img src="img/Logo.png" alt=""></picture>
       </a>
       <div class="header__mobile-cnt">
+        <button type="button" class="header__close close" id="header-close"></button>
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item active"><a href="" data-anchor="about">О нас</a></li>
@@ -103,7 +105,7 @@
 
 <main>
 
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="container">
       <div class="hero__inner">
         <div class="hero__left">
@@ -669,7 +671,7 @@
   </div>
 </div>
 
-<div id="quiz" class="popup quiz">
+<div id="quiz" class="popup quiz popup_show">
   <div class="popup__wrapper">
     <div class="popup__content">
       <button data-close type="button" class="popup__close close"></button>
@@ -707,6 +709,6 @@
   </div>
 </div>
 
-<script src="js/app.min.js?_v=20251110103912"></script>
+<script src="js/app.min.js?_v=20251111153053"></script>
 </body>
 </html>

@@ -1,9 +1,11 @@
-import { bodyLock, bodyUnLock } from "./baseFunctions.js";
+import {bodyLock, bodyUnLock} from "./baseFunctions.js";
 
-const openPopup = (e) => {
+export const openPopup = (e) => {
     bodyLock();
+
     const currentPopup = document.getElementById(e.currentTarget.dataset.popup);
     currentPopup.classList.add("popup_show");
+    closePopupOnOutsideClick(currentPopup);
 
     const hiddenField = currentPopup.querySelector("#order-product");
     if (hiddenField) {
@@ -24,14 +26,36 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-const popup = document.querySelectorAll(".popup");
-popup?.forEach(popup => popup.addEventListener("click", (e) => {
-    if (!e.target.closest(".popup__content")) {
-        e.currentTarget.classList.remove("popup_show");
-        document.body.classList.remove("_lock");
-        bodyUnLock();
-    }
-}));
+document.addEventListener('click', (e) => {
+    console.log(e.target.classList.contains("popup_content"));
+    console.log(e.target.closest(".popup_content"));
+})
+
+function closePopupOnOutsideClick(currentPopup) {
+    // console.log(currentPopup)
+    const content = currentPopup.querySelector(".popup__content");
+    console.log(content)
+    content.addEventListener("click", (e) => {
+        const currentClickElement = e.currentTarget;
+        // console.log(e.currentTarget, 'currentTarget');
+        if (!currentClickElement.classList.contains("popup__content")) {
+
+        }
+        const popupQuiz = e.target.closest(".popup__content");
+        // console.log(popupQuiz)
+    });
+}
+
+// const popup = document.querySelectorAll(".popup");
+// popup?.forEach(popup => popup.addEventListener("click", (e) => {
+//     const popupQuiz = e.target.closest(".quiz");
+//     console.log(popupQuiz)
+//
+//     if (!e.target.closest(".popup__content")) {
+//         e.currentTarget.classList.remove("popup_show");
+//         document.body.classList.remove("_lock");
+//     }
+// }));
 
 const modalOpenButtonsList = document.querySelectorAll("[data-popup]");
 modalOpenButtonsList?.forEach(btn => btn.addEventListener("click", openPopup));

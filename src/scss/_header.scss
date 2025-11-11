@@ -27,9 +27,18 @@
 
   }
 
+  &__close {
+    top: 40px !important;
+    right: 20px !important;
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+
   // .header__mobile-cnt
-  &__mobile-cnt{
-    
+  &__mobile-cnt {
+
     @media screen and (min-width: 992px) {
       display: contents;
     }
@@ -50,7 +59,7 @@
       z-index: 9999;
     }
 
-    &.active{
+    &.active {
       display: flex;
     }
   }
@@ -66,7 +75,7 @@
 
   //.header__info
   &__info {
-    & > div{
+    & > div {
 
       max-width: 213px;
       display: grid;
@@ -81,7 +90,7 @@
 
     }
 
-    @media (max-width: 1200px) and (min-width: 992px){
+    @media (max-width: 1200px) and (min-width: 992px) {
       display: none;
     }
 
@@ -92,7 +101,7 @@
       gap: 20px;
       flex-wrap: wrap;
       order: 2;
-      
+
 
       & > div {
         max-width: 100%;

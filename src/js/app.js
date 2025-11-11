@@ -10,6 +10,7 @@ import "./modules/accordion.js";
 import "./modules/smoothScroll.js";
 import "./modules/popup.js";
 import "./modules/video.js";
+import "./modules/stickyHeader.js";
 
 const heroSlider = new Swiper('.hero__slider', {
     modules: [Navigation, Scrollbar],
@@ -141,4 +142,9 @@ const burgerMenuBtn = document.getElementById('burger');
 burgerMenuBtn?.addEventListener('click', () => {
 
     document.querySelector('.header__mobile-cnt').classList.add('active');
+})
+
+const headerCloseBtn = document.getElementById('header-close');
+headerCloseBtn?.addEventListener('click', () => {
+    document.querySelector('.header__mobile-cnt').classList.remove('active');
 })

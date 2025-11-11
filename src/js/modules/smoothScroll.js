@@ -40,12 +40,8 @@ links?.forEach((link) => {
                 scrollToElement(anchor);
 
                 // Закрытие навигации (если требуется)
-                // document.querySelector('.nav')?.classList.remove('opened');
-                // Убираем активность кнопки открытого меню
-                // document
-                //     .querySelector('.mobile-menu-button')
-                //     ?.classList.remove('opened');
-                // bodyUnLock?.();
+                document.querySelector('.header__mobile-cnt')?.classList.remove('active');
+                bodyUnLock?.();
             }
         });
     } else {

@@ -1,53 +1,56 @@
+import {openPopup} from "./popup.js";
+
 const questions = [
     {
         id: 1,
         title: "Раздвижные или распашные системы123123 ?",
         answers: [
             {
-                image: "static/img/quiz-1.png",
+                image: "/img/quiz-1.png",
                 title: "Остекление веранды, беседки, террасы, зоны для барбекю"
             }, {
-                image: "static/img/quiz-1.png",
+                image: "/img/quiz-1.png",
                 title: "Остекление веранды, беседки, террасы, зоны для барбекю"
             }, {
-                image: "static/img/quiz-1.png",
+                image: "/img/quiz-1.png",
                 title: "Остекление веранды, беседки, террасы, зоны для барбекю"
             }
         ]
     },
-    {
-        id: 2,
-        title: "Раздвижные или распашные системы2 ?",
-        answers: [
-            {
-                image: "static/img/quiz-1.png",
-                title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
-            }, {
-                image: "static/img/quiz-1.png",
-                title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
-            }, {
-                image: "static/img/quiz-1.png",
-                title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
-            }
-        ]
-    },
-    {
-        id: 3,
-        title: "Раздвижные или распашные системы3 ?",
-        answers: [
-            {
-                image: "static/img/quiz-1.png",
-                title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
-            }, {
-                image: "static/img/quiz-1.png",
-                title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
-            }, {
-                image: "static/img/quiz-1.png",
-                title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
-            }
-        ]
-    }
+    // {
+    //     id: 2,
+    //     title: "Раздвижные или распашные системы2 ?",
+    //     answers: [
+    //         {
+    //             image: "static/img/quiz-1.png",
+    //             title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
+    //         }, {
+    //             image: "static/img/quiz-1.png",
+    //             title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
+    //         }, {
+    //             image: "static/img/quiz-1.png",
+    //             title: "Остекление веранды, беседки, террасы, зоны для барбекю2"
+    //         }
+    //     ]
+    // },
+    // {
+    //     id: 3,
+    //     title: "Раздвижные или распашные системы3 ?",
+    //     answers: [
+    //         {
+    //             image: "static/img/quiz-1.png",
+    //             title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
+    //         }, {
+    //             image: "static/img/quiz-1.png",
+    //             title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
+    //         }, {
+    //             image: "static/img/quiz-1.png",
+    //             title: "Остекление веранды, беседки, террасы, зоны для барбекю3"
+    //         }
+    //     ]
+    // }
 ]
+
 
 const currentStepElem = document.querySelector('.quiz__current-step');
 const lastStepElem = document.querySelector('.quiz__last-step');
@@ -86,12 +89,18 @@ function nextStepHandler(e) {
 
     if (parentElement) {
         if (currentStep >= questions.length) {
-            document.getElementById('quiz-inner').innerHTML = `<p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>
-<form action="" class="form">
-          <input type="text" class="form__input" placeholder="Имя">
-          <input type="text" class="form__input" placeholder="Телефон">
-          <button type="submit" class="form__submit">Отправить</button>
-        </form>`
+            document.getElementById('quiz-inner').innerHTML = `
+            <p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>
+            <form action="" class="popup__form form" method="POST" id="callback-form">
+              <input type="text" name="name" class="form__input" placeholder="Ваше имя" required/>
+              <input type="tel" name="phone" class="form__input" placeholder="номер телефона" required data-tel-input/>
+              <div class="form__row">
+                <input type="checkbox" name="agreement" class="form" id="agreement">
+                <label for="agreement" class="form__row-label">Я согласен(а) с <a href="" target="_blank">политиккой
+                  конфиденциальности</a></label>
+              </div>
+              <button type="submit" class="form__submit">Отправить</button>
+            </form>`
         } else {
             currentStep += 1;
             nextStep.dataset.step = String(currentStep);

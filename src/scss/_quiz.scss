@@ -8,7 +8,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.4);
   z-index: 99;
 
   .popup__content {
@@ -40,7 +39,8 @@
   }
 
   &__answers {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 73px;
   }
 
@@ -50,7 +50,8 @@
     text-align: center;
 
     img {
-      height: 200px;
+      height: 100%;
+      max-height: 200px;
       width: 100%;
       border-radius: 40px;
     }
