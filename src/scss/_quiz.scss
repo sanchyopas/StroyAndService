@@ -18,6 +18,14 @@
     }
   }
 
+  &__body {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
 
   &__content {
     max-width: 1040px;
@@ -40,7 +48,7 @@
 
   &__answers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 73px;
   }
 
@@ -54,6 +62,7 @@
       max-height: 200px;
       width: 100%;
       border-radius: 40px;
+      border: 1px solid rgba(72, 123, 148, 1);
     }
 
     p {

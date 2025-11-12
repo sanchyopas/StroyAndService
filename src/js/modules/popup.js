@@ -27,14 +27,12 @@ document.addEventListener("keydown", (e) => {
 });
 
 document.addEventListener('click', (e) => {
-    console.log(e.target.classList.contains("popup_content"));
-    console.log(e.target.closest(".popup_content"));
+
 })
 
 function closePopupOnOutsideClick(currentPopup) {
     // console.log(currentPopup)
     const content = currentPopup.querySelector(".popup__content");
-    console.log(content)
     content.addEventListener("click", (e) => {
         const currentClickElement = e.currentTarget;
         // console.log(e.currentTarget, 'currentTarget');

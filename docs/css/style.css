@@ -2347,6 +2347,14 @@ button {
   max-width: 1040px;
 }
 
+.quiz__body {
+  display: none;
+}
+
+.quiz__body.active {
+  display: block;
+}
+
 .quiz__content {
   max-width: 1040px;
   width: 100%;
@@ -2368,7 +2376,7 @@ button {
 .quiz__answers {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 73px;
 }
 
@@ -2383,6 +2391,7 @@ button {
   max-height: 200px;
   width: 100%;
   border-radius: 40px;
+  border: 1px solid rgb(72, 123, 148);
 }
 
 .quiz__answer p {
