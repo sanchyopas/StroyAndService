@@ -3,7 +3,7 @@ const questions = document.querySelectorAll("[data-slide]");
 const currentStepElem = document.querySelector('.quiz__current-step');
 const lastStepElem = document.querySelector('.quiz__last-step');
 const nextStep = document.getElementById('next-step');
-
+ const arrAnswer = []
 document.addEventListener('DOMContentLoaded', () => {
     questions[0].classList.add("active");
 
@@ -16,24 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function nextStepHandler(e) {
+
     if (currentStep < questions.length) {
         currentStep++;
         currentStepElem.innerText = currentStep;
         nextStep.dataset.step = String(currentStep);
     } else {
-        document.getElementById('quiz-inner').innerHTML = `
-           <form action="" class="popup__form form" method="POST" id="callback-form">
-              <input type="text" name="name" class="form__input" placeholder="Ваше имя" required/>
-              <input type="tel" name="phone" class="form__input" placeholder="номер телефона" required data-tel-input/>
-              <div class="form__row">
-                <input type="checkbox" name="agreement" class="form" id="agreement">
-                <label for="agreement" class="form__row-label">Я согласен(а) с <a href="" target="_blank">политиккой
-                  конфиденциальности</a></label>
-              </div>
-              <button type="submit" class="form__submit">Отправить</button>
-            </form>`;
-    }
 
+    }
 
     questions.forEach(question => {
         question.classList.remove('active');

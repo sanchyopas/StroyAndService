@@ -2355,6 +2355,14 @@ button {
   display: block;
 }
 
+.quiz [data-form] {
+  display: none;
+}
+
+.quiz [data-form].active {
+  display: block;
+}
+
 .quiz__content {
   max-width: 1040px;
   width: 100%;
@@ -2376,7 +2384,7 @@ button {
 .quiz__answers {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
   gap: 73px;
 }
 
@@ -2414,10 +2422,18 @@ button {
   width: 60px;
   height: 60px;
   z-index: 98;
+  background-size: cover;
 }
 
 .quiz__answer.active::before {
   display: block;
+}
+
+.quiz__answer input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .quiz__bottom {
@@ -2808,6 +2824,7 @@ body._lock::after {
   background: rgb(72, 123, 148);
   font-size: 18px;
   font-weight: 500;
+  line-height: 140%;
   color: #FFFFFF;
   text-align: center;
 }
@@ -8013,6 +8030,52 @@ body main {
     font-size: 18px;
   }
 
+  .quiz__inner {
+    padding: 20px 15px;
+  }
+
+  .quiz__title {
+    font-size: 18px;
+  }
+
+  .quiz__answers {
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+  }
+
+  .quiz__answer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .quiz__answer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+  }
+
+  .quiz__answer::before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .quiz__btn button {
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+
+  .quiz__step {
+    font-size: 20px;
+  }
+
   .faq__flex {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -8041,11 +8104,24 @@ body main {
         -ms-flex-order: 0;
             order: 0;
   }
+
+  .popup__top {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .big-title {
     font-size: 80px;
+  }
+
+  .close {
+    right: -10px;
+  }
+
+  .popup__wrapper {
+    padding: 0 20px;
   }
 }
 
@@ -8125,8 +8201,8 @@ body main {
     font-size: 16px;
   }
 
-  .popup__content {
-    padding: 40px 20px 60px;
+  .popup__inner {
+    padding: 40px 15px;
   }
 }
 

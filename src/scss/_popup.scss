@@ -55,6 +55,10 @@ body._lock::after {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  @media screen and (max-width: 700px) {
+    padding: 0 20px;
+  }
 }
 
 .popup__content {
@@ -72,15 +76,15 @@ body._lock::after {
   .lock & {
     visibility: visible;
   }
-
-  @media screen and (max-width: 425px) {
-    padding: 40px 20px 60px;
-  }
 }
 
 
 .popup__inner {
   padding: 40px;
+
+  @media screen and (max-width: 425px) {
+    padding: 40px 15px;
+  }
 }
 
 .popup__top {
@@ -89,8 +93,14 @@ body._lock::after {
   background: rgba(72, 123, 148, 1);
   font-size: 18px;
   font-weight: 500;
+  line-height: 140%;
   color: #FFFFFF;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
 }
 
 .popup__title {
