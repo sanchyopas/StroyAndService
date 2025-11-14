@@ -227,6 +227,7 @@ button {
 
   .swiper-button-next,
   .swiper-button-prev {
+    flex-shrink: 0;
     position: relative;
     top: 0;
     left: 0;

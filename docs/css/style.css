@@ -1497,7 +1497,6 @@ template {
 }
 
 .footer {
-  margin-top: 60px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -1772,6 +1771,8 @@ button {
 
 .slider-controls .swiper-button-next,
 .slider-controls .swiper-button-prev {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   position: relative;
   top: 0;
   left: 0;
@@ -1991,7 +1992,7 @@ button {
 }
 
 .hero__slide {
-  width: 294px !important;
+  width: 100%;
   overflow: hidden;
   border-radius: 40px;
 }
@@ -2344,7 +2345,7 @@ button {
 }
 
 .quiz .popup__content {
-  max-width: 1040px;
+  max-width: 800px;
 }
 
 .quiz__body {
@@ -2395,6 +2396,7 @@ button {
 }
 
 .quiz__answer img {
+  margin-bottom: 15px;
   height: 100%;
   max-height: 200px;
   width: 100%;
@@ -2951,6 +2953,46 @@ body._lock::after {
   border-radius: 5px;
 }
 
+.table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.text ul {
+  list-style-type: disc;
+}
+
+.text ul li {
+  line-height: 140%;
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 140%;
+}
+
 * {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -2980,7 +3022,7 @@ body main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding: 30px 0;
+  padding: 30px 0 0;
 }
 
 @media (min-width: 576px) {
@@ -3928,6 +3970,12 @@ body main {
 
   .ps-sm-5 {
     padding-left: 3rem !important;
+  }
+}
+
+@media screen and (min-width: 578px) {
+  .hero__slide {
+    width: 294px !important;
   }
 }
 
@@ -4881,12 +4929,15 @@ body main {
 }
 
 @media screen and (min-width: 768px) {
+  .video__inner-wrp {
+    padding: 0 20px;
+  }
+
   .video__inner-wrp .container {
     display: contents;
   }
 
   .video__slide {
-    width: 449px !important;
     height: 361px !important;
   }
 
@@ -7884,12 +7935,6 @@ body main {
 
   .faq__title {
     display: none;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .quiz .popup__content {
-    max-width: 800px;
   }
 }
 

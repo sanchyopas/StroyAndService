@@ -8,9 +8,14 @@
   //.video__inner-wrp
   &__inner-wrp {
 
+    @media screen and (min-width: 768px) {
+      padding: 0 20px;
+    }
+
     .container {
       @media screen and (min-width: 768px) {
         display: contents;
+
       }
     }
 
@@ -28,7 +33,7 @@
   &__slide {
     overflow: hidden;
     @media screen and (min-width: 768px) {
-      width: 449px !important;
+      //width: 449px !important;
       height: 361px !important;
     }
 

@@ -118,12 +118,16 @@
 
   //.hero__slide
   &__slide {
-    width: 294px !important;
+    width: 100%;
     overflow: hidden;
     border-radius: 40px;
 
     @media screen and (min-width: 992px) {
       height: 480px !important;
+    }
+
+    @media screen and (min-width: 578px) {
+      width: 294px !important;
     }
   }
 

@@ -72,12 +72,12 @@ const serviceSlider = new Swiper('.service__slider', {
     },
 
     navigation: {
-        nextEl: '.about__btn-next',
+        nextEl: '.service__btn-next',
         prevEl: '.about__btn-prev',
     },
 
     scrollbar: {
-        el: '.about__scrollbar',
+        el: '.service__scrollbar',
     },
 
     breakpoints: {
@@ -96,15 +96,16 @@ const serviceSlider = new Swiper('.service__slider', {
 const videoSlider = new Swiper('.video__slider', {
     modules: [Scrollbar, Navigation],
     direction: 'horizontal',
-    spaceBetween: 37,
+    spaceBetween: 30,
 
     navigation: {
-        nextEl: '.about__btn-next',
-        prevEl: '.about__btn-prev',
+        nextEl: '.video__btn-next',
+        prevEl: '.video__btn-prev',
     },
 
     scrollbar: {
         el: '.video__scrollbar',
+        draggable: true,
     },
 
     breakpoints: {
@@ -112,7 +113,10 @@ const videoSlider = new Swiper('.video__slider', {
             slidesPerView: 1,
         },
         768: {
-            slidesPerView: 1.5,
+            slidesPerView: 2,
+        },
+        920: {
+            slidesPerView: 3.5,
         }
     }
 });
@@ -148,3 +152,5 @@ const headerCloseBtn = document.getElementById('header-close');
 headerCloseBtn?.addEventListener('click', () => {
     document.querySelector('.header__mobile-cnt').classList.remove('active');
 })
+
+

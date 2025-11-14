@@ -56,7 +56,7 @@
   </div>
 </div>
 
-<div id="quiz" class="popup quiz popup_show">
+<div id="quiz" class="popup quiz">
   <div class="popup__wrapper">
     <div class="popup__content">
       <button data-close type="button" class="popup__close close"></button>
@@ -65,54 +65,40 @@
       </div>
       <div class="quiz__inner" id="quiz-inner">
         <div class="quiz__body" data-slide="1">
-          <p class="quiz__title">Заполните форму и наш менеджер свяжется с вами ?</p>
+          <p class="quiz__title">Вопрос 1</p>
           <div class="quiz__answers">
             <label for="answer-1" class="quiz__answer">
-              <input type="radio" name="answer-1" id="answer-1"
-                     value="Остекление веранды, беседки, террасы, зоны для барбекю">
+              <input type="radio" name="answer" id="answer-1" value="Вопрос 1 ответ 1">
               <img src="@img/quiz-1.png" alt="">
-              <span>Остекление веранды, беседки, террасы, зоны для барбекю</span>
+              <span>Вопрос 1 ответ 1</span>
             </label>
             <label for="answer-2" class="quiz__answer">
-              <input type="radio" name="answer-1" id="answer-2"
-                     value="Остекление зимнего сада, пристройки">
+              <input type="radio" name="answer" id="answer-2" value="Вопрос 1 ответ 1">
               <img src="@img/quiz-2.png" alt="">
-              <span>Остекление зимнего сада, пристройки</span>
+              <span>Вопрос 1 ответ 2</span>
             </label>
           </div>
         </div>
         <div class="quiz__body" data-slide="2">
-          <p class="quiz__title">2Заполните форму и наш менеджер свяжется с вами ?</p>
+          <p class="quiz__title">Вопрос 2</p>
           <div class="quiz__answers">
-            <div class="quiz__answer">
+            <label for="answer-2-1" class="quiz__answer">
+              <input type="radio" name="answer" id="answer-2-1" value="Вопрос 2 ответ 1">
               <img src="@img/quiz-1.png" alt="">
-              <p>Остекление веранды, беседки, террасы, зоны для барбекю</p>
-            </div>
-            <div class="quiz__answer">
-              <img src="@img/quiz-2.png" alt="">
-              <p>Остекление зимнего сада, пристройки</p>
-            </div>
-          </div>
-        </div>
-        <div class="quiz__body" data-slide="3">
-          <p class="quiz__title">32Заполните форму и наш менеджер свяжется с вами ?</p>
-          <div class="quiz__answers">
-            <label for="answer-1" class="quiz__answer">
-              <input type="radio" name="answer-1" id="answer-1"
-                     value="Остекление веранды, беседки, террасы, зоны для барбекю">
-              <img src="@img/quiz-1.png" alt="">
-              <span>Остекление веранды, беседки, террасы, зоны для барбекю</span>
+              <span>Вопрос 2 ответ 1</span>
             </label>
-            <div class="quiz__answer">
+            <label for="answer-2-2" class="quiz__answer">
+              <input type="radio" name="answer" id="answer-2-2" value="Вопрос 2 ответ 2">
               <img src="@img/quiz-2.png" alt="">
-              <p>Остекление зимнего сада, пристройки</p>
-            </div>
+              <span>Вопрос 2 ответ 2</span>
+            </label>
           </div>
         </div>
         <div class="quiz__form" data-form>
           <form action="" class="popup__form form" method="POST" id="callback-form">
             <input type="text" name="name" class="form__input" placeholder="Ваше имя" required/>
             <input type="tel" name="phone" class="form__input" placeholder="номер телефона" required data-tel-input/>
+            <input type="hidden" class="form__input" name="answers" id="answers" value="">
             <div class="form__row">
               <input type="checkbox" name="agreement" class="form" id="agreement">
               <label for="agreement" class="form__row-label">Я согласен(а) с <a href="" target="_blank">политиккой

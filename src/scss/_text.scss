@@ -1,0 +1,35 @@
+.table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+}
+
+.text {
+  font-size: 16px;
+
+  h1,h2,h3,h4,h5,h6 {
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: disc;
+
+    li {
+      line-height: 140%;
+      margin-bottom: 5px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+
+
+
+}

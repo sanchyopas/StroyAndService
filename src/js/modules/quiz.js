@@ -3,7 +3,7 @@ const questions = document.querySelectorAll("[data-slide]");
 const currentStepElem = document.querySelector('.quiz__current-step');
 const lastStepElem = document.querySelector('.quiz__last-step');
 const nextStep = document.getElementById('next-step');
- const arrAnswer = []
+const arrAnswer = []
 document.addEventListener('DOMContentLoaded', () => {
     questions[0].classList.add("active");
 
@@ -16,21 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function nextStepHandler(e) {
-
-    if (currentStep < questions.length) {
-        currentStep++;
-        currentStepElem.innerText = currentStep;
-        nextStep.dataset.step = String(currentStep);
-    } else {
-
-    }
+    const isActiveElement = e.currentTarget.closest('.quiz__inner').querySelector('input[type="radio"]:checked');
+    const currentStepDataStep = +e.currentTarget.dataset.step;
+    const answer = isActiveElement.closest('.quiz__body').querySelector('.quiz__title').innerText;
+    const answersString = `${answer} - ${isActiveElement.value}`;
+    arrAnswer.push(answersString)
 
     questions.forEach(question => {
         question.classList.remove('active');
     });
 
-    const currentStepDataStep = +e.currentTarget.dataset.step;
-    document.querySelector(`[data-slide="${currentStepDataStep}"]`)?.classList.add('active');
+    if (isActiveElement) {
+        if (currentStep >= questions.length) {
+            questions.forEach(question => {
+                question.classList.remove('active');
+            });
+            document.querySelector('.quiz__bottom').style.display = 'none';
+            document.getElementById('answers').value = arrAnswer;
+            document.querySelector('[data-form]').classList.add('active');
+        } else {
+            currentStep += 1;
+            currentStepElem.innerText = currentStep;
+            nextStep.dataset.step = String(currentStep);
+            document.querySelector(`[data-slide="${currentStep}"]`)?.classList.add('active');
+        }
+    }
 }
 
 
