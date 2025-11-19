@@ -6935,12 +6935,6 @@ body main {
   .faq__text {
     max-width: 400px;
   }
-
-  .faq__accordion {
-    -webkit-transform: translateX(-100px);
-        -ms-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
 }
 
 @media screen and (min-width: 1300px) {
